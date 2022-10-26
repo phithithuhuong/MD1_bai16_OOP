@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--[Bài tập] xây dựng lớp hình tròn-->
+
+<script>
+
+    class Circle {//khai báo mô hình
+        radius;
+        color;//thuộc tính của mô hình
+
+        constructor(radius, color) {//hàm khởi tạo đưa dữ liệu cụ thể vào trong đối tượng
+            this.radius = radius;
+            this.color = color;
+        }
+
+        getRadius() {//phương thức
+            return this.radius
+        }
+
+        getArea() {
+            let area = Math.PI * this.radius * this.radius;
+            return area;
+        }
+
+
+    }
+
+    let myCircle = new Circle(2, 'blue')
+
+   let radius=myCircle.getRadius()
+   let area= myCircle.getArea()
+    alert('Area : '+area+';radius: '+radius)
+</script>
+</body>
+</html>

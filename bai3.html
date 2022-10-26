@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--[Bài tập] Xây dựng lớp mô tả hình chữ nhật-->
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+<script>
+  class Rectangle {// lớp (mô hình)/khai báo
+    width;
+    height;//thuộc tính của Rectangle(lớp)
+    constructor (width,height) {// khởi tạo đưa dũ liệu vào
+      this.width = width;
+      this.height = height;
+    }
+
+    getWidth() {//phương thức (methoth)
+      return this.width;
+    }
+
+    getHeight() {
+      return this.height;
+    }
+
+    setWidth(width) {
+      this.width = width;
+    }
+
+    setHeight(height) {
+      this.height = height;
+    }
+
+    getArea() {
+      return this.width * this.height;
+    }
+
+    getPerimeter() {
+      return (this.width + this.height) * 2;
+    }
+
+  }
+
+
+  let myRectangle = new Rectangle(300,100);//truyền đối tượng cụ thể vào
+  let width = myRectangle.getWidth();
+  let height = myRectangle.getHeight();
+
+  myRectangle.setWidth(200);
+  myRectangle.getWidth();
+
+  // document.write(myRectangle.getWidth());
+
+
+  let canvas = document.getElementById("DemoCanvas");//lấy id của canvas
+  let ctx = canvas.getContext('2d');//bút vẽ
+  ctx.fillStyle='pink';//màu sắc của hình
+  ctx.fillRect(200, 200, width, height)//căn bề ngang,dọc
+  for (var x = 6; x < 10; x++)
+  {
+      console.log(x);
+  }
+</script>
+
+</body>
+</html>

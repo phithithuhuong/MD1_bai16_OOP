@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--[Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn-->
+<script>
+    class SwitchButton {
+        status;//trạng thái
+        lamp;//đèn ngủ
+        constructor() {
+        }
+
+        connectToLamp(lamp) {
+            this.lamp = lamp;
+        }
+
+        switchOn() {
+            this.status = true;
+            this.lamp.turnOn();
+        }
+
+        switchOff() {
+            this.status = false;
+            this.lamp.turnOff();
+        }
+    }
+
+    class ElectricLamp {
+        status;
+
+        constructor() {
+        }
+
+        turnOn() {
+            this.status = true;
+        }
+        turnOff(){
+            this.status = false;
+        }
+    }
+
+    let electricLamp = new ElectricLamp();
+    let switchButton = new SwitchButton();
+    switchButton.connectToLamp(electricLamp);
+    switchButton.switchOn();
+    console.log(switchButton , electricLamp);
+    switchButton.switchOff();
+    console.log(switchButton, electricLamp)
+
+</script>
+</body>
+</html>

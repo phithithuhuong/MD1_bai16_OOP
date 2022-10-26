@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--tạo hình tròn-->
+<body>
+<canvas width="2000px" height="1000px" id="theCanvas"></canvas>
+<script>
+  let canvas =document.getElementById('theCanvas');//lấy id của canvas
+  let ctv = canvas.getContext('2d');//but vẽ
+
+  ctv.beginPath()
+  ctv.arc(200,200,200,0,Math.PI * 2 )//kích thước của hình tròn
+  ctv.fillStyle = 'pink'//màu sắc của hình
+  ctv.fill()
+  ctv.closePath()
+
+</script>
+</body>
+
+</html>

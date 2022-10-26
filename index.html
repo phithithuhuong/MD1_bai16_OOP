@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--xây dựng lớp date-->
+<script>
+    class Date {//khai báo lớp(mô hình)
+        day;
+        month;//truyền thuộc tính
+        year;
+
+        constructor(day, month, year) {// hàm khởi tạo dưa dữ liệu cụ thể vào đối tượng
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() {//phương thức(method) lấy ra 1 day đối tượng
+            return this.day;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        setDay(newDay) {//sửa
+            this.day = newDay;
+        }
+        setMonth(newMonth){
+            this.month = newMonth;
+
+        }
+        setYear(newYear){
+            this.year=newYear;
+        }
+
+        toString(){//in ra ngày tháng năm
+            alert(this.getDay() + '/' + this.getMonth() + '/' + this.getYear());
+        }
+
+    }
+
+    let today = new Date(24, 10, 2022);//tạo ra 1 ngày cụ thể từ mô hình date
+    // console.log('Ngay hom nay ',today.getDay());//lấy ra ngày 24 của today
+    today.setDay(9); //chỉnh sửa ngày của today từ 24 sang 9
+    // console.log('Ngay sau khi thay doi ', today.getDay());//lấy ra ngày 25
+    today.setMonth(2);
+    today.setYear(2003);
+
+    today.toString();// in ra 25/10/2022
+</script>
+
+</body>
+</html>
